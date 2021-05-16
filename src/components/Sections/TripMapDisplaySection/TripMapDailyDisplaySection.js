@@ -40,7 +40,7 @@ function TripMapDailyDisplaySection(props) {
                     width="500"
                     height="500"
                     border="0"
-                    src={"https://www.google.com/maps/embed/v1/directions?key=AIzaSyAM9uPSisu7fOO4ke6sZEm8cCgKOK-QXDc" + origin + wayPoints + destination + "&units=metric"} >
+                    src={"https://www.google.com/maps/embed/v1/directions?key=" + origin + wayPoints + destination + "&units=metric"} >
                 </iframe>
             </div>
         </div>
