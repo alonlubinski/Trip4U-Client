@@ -1,0 +1,10 @@
+
+
+.row-btn {
+    margin: 10px 10px;
+}
+.row-btns {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
