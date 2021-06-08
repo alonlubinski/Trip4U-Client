@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import TripMapDisplaySection from '../TripMapDisplaySection/TripMapDisplaySection';
 import TripCalendarDisplaySection from '../TripCalendarDisplaySection/TripCalendarDisplaySection';
+import TripEditSection from '../TripEditSection/TripEditSection';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -107,7 +108,7 @@ function TripDisplaySection(props) {
                     <TripCalendarDisplaySection trip={props.trip}/>
                 </TabPanel>
                 <TabPanel value={value} index="edit">
-                    <p>Edit</p>
+                    <TripEditSection trip={props.trip} eventsPool={props.trip.data.eventsPool}/>
                 </TabPanel>
             </div>
         </div>

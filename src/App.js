@@ -1,6 +1,4 @@
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
-import LoggedNavbar from './components/Navbar/LoggedNavbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/pages/Home';
 import Signup from './components/pages/Signup';
@@ -9,6 +7,7 @@ import BuildTrip from './components/pages/BuildTrip';
 import Profile from './components/pages/Profile';
 import Trip from './components/pages/Trip';
 import About from './components/pages/About';
+import Terms from './components/pages/Terms';
 
 
 function App() {
@@ -23,6 +22,7 @@ function App() {
           <Route path="/profile" exact component={Profile}/>
           <Route path="/trip" exact component={Trip}/>
           <Route path="/about" excat component={About}/>
+          <Route path="/terms" exact component={Terms}/>
         </Switch>
       </Router>
     </>

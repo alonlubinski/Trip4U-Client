@@ -79,12 +79,6 @@ function BuildTripSection(props) {
         });
     }
 
-    // const test = () => {
-    //     console.log(state);
-    //     console.log(startLocation);
-    //     console.log(endLocation);
-    // }
-
     const handleBuildMyTrip = () => {
         if (startLocation === '') {
             alert("Please enter start location");
@@ -146,10 +140,10 @@ function BuildTripSection(props) {
 
     }
 
-    let content = loading ? <div><CircularProgress/><h1>Building your trip, please wait...</h1></div> : <MuiPickersUtilsProvider utils={DateFnsUtils}>
+    let content = loading ? <div className="loading-container"><div className="loading-body"><CircularProgress className="loading-circular"/><h1>Building your trip, please wait...</h1></div></div> : <MuiPickersUtilsProvider utils={DateFnsUtils}>
         <div className={classes.container}>
             <CssBaseline />
-            <div>
+            <div className="building-container">
                 <form>
                     <Card variant="outlined" className={classes.card} spacing={2}>
                         <Grid container spacing={2}>

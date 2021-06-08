@@ -41,10 +41,10 @@ function AboutSection() {
     const classes = useStyles();
 
     return (
-        <div class="about-container">
+        <div className="about-container">
             <h1>About Us</h1>
-            <div class="about-content">
-                <div class="about-text">
+            <div className="about-content">
+                <div className="about-text">
                     <p>Over the past decade, there has been a significant increase in the number of Israelis traveling abroad, with some of them even flying more than once a year. As a result, the need arises for tools that will allow simple, fast, and efficient trip planning.</p>	
                     <p>Trip4U, a Smart and Customized Trip Planning System project, is designed to build a system that will optimize the way we plan our trip around the world. With the help of the system, we can build a smart and customized trip itinerary for the customers according to their preferences and interests.</p>
                     <p>The system requirements include a convenient user interface that will allow the users to enter their trip characteristics like destinations, dates, day load and interests. The system is required to perform fast and efficient data collection about attractions according to the user’s preferences, which will be transferred to a smart algorithm that will build an optimal itinerary. In addition, the users will be able to edit the trip itinerary that the algorithm generated.</p>
@@ -62,17 +62,15 @@ function AboutSection() {
                     <p>The final product is a system that builds a trip itinerary for the users according to their preferences, and with the help of external API, the itinerary will be displayed on a map and calendar. The system is available for users on web and mobile platforms.</p>
 
                 </div>
-                <div class="about-crew">
-                    <div class="about-crew-image">
+                <div className="about-crew">
+                    <div className="about-crew-image">
                         <Avatar alt="alon_image" src={alon_image} className={classes.large} />
                         <p>Alon Lubinski</p>
                     </div>
-                    <div class="about-crew-image">
+                    <div className="about-crew-image">
                         <Avatar alt="daniel_image" src={daniel_image} className={classes.large} />
                         <p>Daniel Zusev</p>
-                    </div>
-                    
-                    
+                    </div>     
                 </div>
             </div>
         </div>

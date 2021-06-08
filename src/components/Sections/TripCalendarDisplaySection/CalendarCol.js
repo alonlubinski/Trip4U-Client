@@ -19,6 +19,15 @@ function CalendarCol(props) {
     const [open, setOpen] = useState(false);
     const [name, setName] = useState('');
     const [snippet, setSnippet] = useState('');
+    const [address, setAddress] = useState('');
+    const [hours, setHours] = useState('');
+    const [price, setPrice] = useState('');
+    const [website, setWebsite] = useState('');
+    const [bus, setBus] = useState('');
+    const [train, setTrain] = useState('');
+    const [subway, setSubway] = useState('');
+    const [phone, setPhone] = useState('');
+    const [email, setEmail] = useState('');
     const [image, setImage] = useState('');
 
     console.log("Calendar Column - " + props.day);
@@ -36,8 +45,18 @@ function CalendarCol(props) {
         setOpen(true);
         setName(props.name);
         setSnippet(props.intro);
+        setAddress(props.properties.Address);
+        setHours(props.properties.Hours);
+        setPrice(props.properties.Price);
+        setWebsite(props.properties.Website)
+        setBus(props.properties.Bus);
+        setTrain(props.properties.Train);
+        setSubway(props.properties.Subway);
+        setPhone(props.properties.Phone);
+        setEmail(props.properties.Email);
         setImage(props.imageURL);
         console.log(open);
+        console.log(props.properties)
     }
 
     const handleClose = () => {
@@ -46,6 +65,20 @@ function CalendarCol(props) {
 
     var imageCard = (image === null) ? <CardMedia className="event-image" image={img} title="Event Image NOT" /> : <CardMedia className="event-image" image={image} title="Event Image" />;
 
+    var properties = <div>
+        <h2>More Details</h2>
+        {(address) ? <p>Address: {address}</p> : <></>}
+        {(hours) ? <p>Hours: {hours}</p> : <></>}
+        {(price) ? <p>Price: {price}</p> : <></>}
+        {(website) ? <p>Website: <a href={website}>{website}</a></p> : <></>}
+        {(bus || train || subway) ? <h3>Transportation</h3> : <></>}
+        {(bus) ? <p>Bus: {bus}</p> : <></>}
+        {(train) ? <p>Train: {train}</p> : <></>}
+        {(subway) ? <p>Subway: {subway}</p> : <></>}
+        {(phone || email) ? <h3>Contact Us</h3> : <></>}
+        {(phone) ? <p>Phone: {phone}</p> : <></>}
+        {(email) ? <p>Email: {email}</p> : <></>}
+    </div>
     return (
         <div className="col-container">
             <div className="col-header">
@@ -71,6 +104,7 @@ function CalendarCol(props) {
                 <DialogContent>
                     <DialogContentText id="alert-dialog-slide-description">
                         {snippet}
+                        {properties}
                         {imageCard}
                     </DialogContentText>
                 </DialogContent>

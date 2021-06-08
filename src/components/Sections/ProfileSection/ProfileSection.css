@@ -53,11 +53,13 @@
 
 .profile-edit-button {
     position: relative;
-    top: 40%;
+    margin: auto;
 }
 
 .profile-info {
-
+    width: 100%;
+    margin: auto;
+    text-align: center;
 }
 
 .profile-info-head {

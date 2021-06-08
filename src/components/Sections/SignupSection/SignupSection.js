@@ -22,7 +22,7 @@ const useStyles = makeStyles( (theme) => ({
         backgroundColor: theme.palette.secondary.main,
       },
       form: {
-        width: '100%', // Fix IE 11 issue.
+        width: '100%', 
         marginTop: theme.spacing(3)
       },
       submit: {
@@ -134,6 +134,7 @@ function SignupSection() {
                                 <FormControlLabel
                                     control={<Checkbox value="terms" color="primary" onChange={handleCheck} name="terms"/>}
                                     label="Accept terms"/>
+                                <a href="/terms">Here</a>
                             </Grid>
                         </Grid>
                         <div>

@@ -155,10 +155,10 @@ function ProfileSection() {
       <div className="profile-cover">
 
       </div>
-      <div class="profile-image">
+      <div className="profile-image">
         <Avatar alt="profile_image" src={profile_image} className={classes.large} />
       </div>
-      <div class="profile-body">
+      <div className="profile-body">
         <EditProfileDialog open={dialog} close={handleClickClose} confirm={handleEditConfirm} change={handleEditChange} />
         <h1>{firstName + " " + lastName}</h1>
         <Divider variant="middle" className={classes.divider} />
@@ -175,17 +175,17 @@ function ProfileSection() {
         </div>
 
       </div>
-      <div class="profile-tabs-container">
+      <div className="profile-tabs-container">
         <TabPanel value={value} index="about">
-          <div class="profile-info">
-            <p class="profile-info-head">First Name</p>
-            <p class="profile-info-body">{firstName}</p>
-            <p class="profile-info-head">Last Name</p>
-            <p class="profile-info-body">{lastName}</p>
-            <p class="profile-info-head">Email</p>
-            <p class="profile-info-body">{email}</p>
-            <p class="profile-info-head">Role</p>
-            <p class="profile-info-body">{role}</p>
+          <div className="profile-info">
+            <p className="profile-info-head">First Name</p>
+            <p className="profile-info-body">{firstName}</p>
+            <p className="profile-info-head">Last Name</p>
+            <p className="profile-info-body">{lastName}</p>
+            <p className="profile-info-head">Email</p>
+            <p className="profile-info-body">{email}</p>
+            <p className="profile-info-head">Role</p>
+            <p className="profile-info-body">{role}</p>
           </div>
         </TabPanel>
         <TabPanel value={value} index="trips">
